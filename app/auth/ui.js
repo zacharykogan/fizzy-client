@@ -16,6 +16,7 @@ const signInSuccess = function (data) {
   $('div.returning_user').hide()
   $('#signed_in_user').show()
   $('form').trigger('reset')
+  $('div.settings').hide()
 }
 
 const signInFailure = function (data) {
@@ -31,10 +32,15 @@ const signOutSuccess = (data) => {
   $('#signed_in_user').hide()
 }
 
+const openSettings = function () {
+  $('div.settings').show()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
-  signOutSuccess
+  signOutSuccess,
+  openSettings
 }

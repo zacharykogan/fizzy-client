@@ -3,6 +3,7 @@
 // .hide unatharized view
 
 const authEvents = require('./auth/events')
+const uiEvents = require('./auth/ui')
 // const gameEvents = require('./game/events')
 
 // use require without a reference to ensure a file is bundled
@@ -14,5 +15,6 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('#settings').on('click', uiEvents.openSettings)
   // $('#new-post').on('click', gameEvents.onNewGame)
 })
