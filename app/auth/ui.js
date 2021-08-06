@@ -16,6 +16,7 @@ const signInSuccess = function (data) {
   $('div.returning_user').hide()
   $('#signed_in_user').show()
   $('form').trigger('reset')
+  $('div.settings').hide()
 }
 
 const signInFailure = function (data) {
@@ -31,10 +32,28 @@ const signOutSuccess = (data) => {
   $('#signed_in_user').hide()
 }
 
+const openSettings = function () {
+  $('#message').text('SETTINGS')
+  $('div.settings').show()
+  $('#post-review').hide()
+  $('#settings').hide()
+  $('#sign-out').hide()
+  // $('#exit-settings').show()
+}
+const closeSettings = function () {
+  $('#message').text(' ')
+  $('div.settings').hide()
+  $('#post-review').show()
+  $('#settings').show()
+  $('#sign-out').show()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
-  signOutSuccess
+  signOutSuccess,
+  openSettings,
+  closeSettings
 }

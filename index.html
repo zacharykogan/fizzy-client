@@ -33,7 +33,20 @@
 
   <p id="message"></p>
   <div id="signed_in_user">
-    <button id="new-game">POST A REVIEW</button>
+    <button id="post-review">POST A REVIEW</button>
+    <br>
+    <br>
+    <br>
+    <button id="settings">SETTINGS</button>
+    <div class="settings">
+      <form id="change-password">
+        <label></label>
+        <input name="credentials[password]" type="password" placeholder="old password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="new password">
+        <input class="submit" type="submit" value="CHANGE PASSWORD">
+      </form>
+      <button id="exit-settings">CANCEL</button>
+    </div>
     <br>
     <br>
     <br>
