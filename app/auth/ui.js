@@ -33,7 +33,19 @@ const signOutSuccess = (data) => {
 }
 
 const openSettings = function () {
+  $('#message').text('SETTINGS')
   $('div.settings').show()
+  $('#post-review').hide()
+  $('#settings').hide()
+  $('#sign-out').hide()
+  // $('#exit-settings').show()
+}
+const closeSettings = function () {
+  $('#message').text(' ')
+  $('div.settings').hide()
+  $('#post-review').show()
+  $('#settings').show()
+  $('#sign-out').show()
 }
 
 module.exports = {
@@ -42,5 +54,6 @@ module.exports = {
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  openSettings
+  openSettings,
+  closeSettings
 }
