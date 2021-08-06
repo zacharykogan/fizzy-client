@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
 
 body {
-  background-color: rgb(197, 93, 226);
+  background-color: rgb(209, 238, 236);
   color: brown;
   text-align: center;
   width: 90%;
   max-height: 50% vh;
 }
 h1 {
-  color: rgb(45, 179, 184);
+  color: rgb(204, 47, 228);
   cursor:  default;
   font-family: Goldman;
   width: 100%;
@@ -30,7 +30,7 @@ input{
 //   cursor:  default;
 // }
 form{
-  color: rgb(236, 44, 208);
+  color: rgb(233, 200, 228);
   background-blend-mode: darken;
   align: center;
   font-family: Goldman;
@@ -38,7 +38,7 @@ form{
 }
 
 p {
-  color: rgb(31, 139, 73);
+  color: rgb(230, 198, 238);
   font-size: 55px;
   font-style: bold;
   border: 5px;
@@ -48,9 +48,8 @@ p {
   min-width: 620px;
 }
 .submit {
-  background-color: rgba(87,160,164,255);
+  background-color: rgb(158, 231, 235);
   border: 2px solid #rgb(236, 44, 208);
-  color: rgb(236, 44, 208);
   padding: 15px 32px;
   text-align: center;
   text-decoration: bold;
@@ -63,9 +62,8 @@ p {
 }
 
 button {
-  background-color: rgba(87,160,164,255);
+  background-color: rgb(148, 182, 180);
   border: 2px solid #rgb(236, 44, 208);
-  color: rgb(236, 44, 208);
   padding: 15px 32px;
   text-align: center;
   text-decoration: bold;

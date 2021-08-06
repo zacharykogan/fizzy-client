@@ -11,11 +11,10 @@ const signUpFailure = function (data) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Welcome to FIZZY ')
+  $('#message').text('Welcome to FIZZY! ')
   $('div.new_user').hide()
   $('div.returning_user').hide()
   $('#signed_in_user').show()
-  $('#new-game').show()
   $('form').trigger('reset')
 }
 
@@ -24,9 +23,18 @@ const signInFailure = function (data) {
   $('form').trigger('reset')
 }
 
+const signOutSuccess = (data) => {
+  $('#message').text('Goodbye!')
+  $('div.new_user').show()
+  $('#signed_in_user').show()
+  $('div.returning_user').show()
+  $('#signed_in_user').hide()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  signOutSuccess
 }

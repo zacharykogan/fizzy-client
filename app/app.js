@@ -12,16 +12,7 @@ $(() => {
   $('#signed_in_user').hide()
   // $('#game-board').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
-  // $('#sign-in').on('submit', authEvents.onSignIn)
-  // $('#sign-out').on('click', authEvents.onSignOut)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-out').on('click', authEvents.onSignOut)
   // $('#new-post').on('click', gameEvents.onNewGame)
-  // ui.accessAllCells().on('click', authEvents.onPlay)
-  // let currentPlayer = '✕'
-
-  // // // Our box click event handler
-  // const onBoxClick = (event) => {
-  //   console.log('click')}
-
-  // //   // Select the box that was clicked, event.target
-  //   const box = $(event.target)
 })
