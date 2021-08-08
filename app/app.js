@@ -17,5 +17,6 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#settings').on('click', authUi.openSettings)
   $('#exit-settings').on('click', authUi.closeSettings)
+  $('#change-password').on('submit', authEvents.onChangePassword)
   // $('#new-post').on('click', gameEvents.onNewGame)
 })

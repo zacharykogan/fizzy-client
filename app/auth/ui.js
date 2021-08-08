@@ -48,6 +48,14 @@ const closeSettings = function () {
   $('#sign-out').show()
 }
 
+const changePasswordSuccess = function () {
+  $('#message').text('Password Updated')
+}
+
+const changePasswordFailure = function () {
+  $('#message').text('ERROR')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -55,5 +63,7 @@ module.exports = {
   signInFailure,
   signOutSuccess,
   openSettings,
-  closeSettings
+  closeSettings,
+  changePasswordSuccess,
+  changePasswordFailure
 }
