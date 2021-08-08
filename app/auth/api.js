@@ -30,7 +30,7 @@ const changePassword = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
-    headers: { Authorization: 'Bearer' + store.user.token },
+    headers: { Authorization: 'Bearer ' + store.user.token },
     data: data
   })
 }

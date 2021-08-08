@@ -35,11 +35,9 @@ const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormfields(form)
+  console.log(data)
   api.changePassword(data)
-    .then(function (data) {
-      store.user = data.user
-      ui.changePasswordSuccess()
-    })
+    .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
 
