@@ -15,11 +15,11 @@ const closeReviews = function () {
   $('#message').text('')
 }
 
-const postReview = function () {
+const postReviewSuccess = function () {
   closeReviews()
 }
 module.exports = {
   openReviews,
   closeReviews,
-  postReview
+  postReviewSuccess
 }

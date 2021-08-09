@@ -30,36 +30,41 @@
       <input class="submit" type="submit" value="Sign In">
     </form>
   </div>
-
+<!-- <form id="book-to-movie">
+  <input name="book[title]" type="text" placeholder="Book Title">
+  <input name="book[author]" type="text" placeholder="Book author">
+  <button type="submit">Create Book</button>
+</form> -->
   <p id="message"></p>
-  <div id="signed_in_user" class="form-group">
+  <div id="signed_in_user">
     <button id="post-review">REVIEW A DRINK</button>
-    <div id="reviews" class="form-group">
-      <label for="exampleFormControlInput1"> WHAT WAS THE NAME OF THE BEVERAGE?</label>
-      <input type="string" class="form-control" id="bev-name" placeholder="">
+     <div id="reviews" class="form-group">
+      <form id="reviewform">
+      <label> WHAT WAS THE NAME OF THE BEVERAGE?</label>
+      <input name="name[name]" type="text" class="form-control">
       <label>WHAT TYPE OR STYLE WAS IT?</label>
-      <input type="string" class="form-control" id="type" placeholder="">
+      <input name="type" type="text" class="form-control" id="type">
       <label>SAY A FEW WORDS ABOUT IT</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <input name="review[review]" type="text" class="form-control" rows="3">
       <label>RATE 0-5</label>
       <br>
-      <select class="custom-select custom-select-lg mb-3">
-        <option selected></option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
+      <input name="rating[rating]" type="number">
       <br>
-        <input id ="submit-review" class="submit" type="submit" value="Post Review">
-      <br>
+      <button type="submit"> Post Review </button>
+      </form>
+      <!-- <form id="reveiws">
+        <input name="name[name]" type="text" placeholder="Name of Beverage">
+        <input name="type[type]" type="text" placeholder="Type of Style of Beverage">
+        <input name="review[review]" type="text" placeholder="Your Review">
+        <input name="rating[rating]" type="number" placeholder="">
+        <button type="submit">Submit Review</button>
+      </form> -->
+        <br>
       <br>
       <br>
       <button id="close-review">CANCEL</button>
+      </div>
       <br>
-    </div>
     <br>
     <br>
     <br>
