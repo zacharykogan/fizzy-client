@@ -14,6 +14,15 @@ const postReview = function (data) {
   })
 }
 
+const getAllReviews = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews',
+    method: 'GET',
+    headers: { Authorization: 'Bearer ' + store.user.token },
+    data: data
+  })
+}
 module.exports = {
-  postReview
+  postReview,
+  getAllReviews
 }

@@ -38,7 +38,7 @@ const openSettings = function () {
   $('#post-review').hide()
   $('#settings').hide()
   $('#sign-out').hide()
-  // $('#exit-settings').show()
+  $('#showallreveiws').hide()
 }
 const closeSettings = function () {
   $('#message').text(' ')
@@ -46,14 +46,16 @@ const closeSettings = function () {
   $('#post-review').show()
   $('#settings').show()
   $('#sign-out').show()
+  $('#showallreveiws').show()
 }
 
 const changePasswordSuccess = function () {
+  closeSettings()
   $('#message').text('Password Updated')
 }
 
 const changePasswordFailure = function () {
-  $('#message').text('ERROR')
+  $('#message').text('Check your password and try again')
 }
 
 module.exports = {

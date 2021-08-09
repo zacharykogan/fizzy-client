@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
+    "mdbootstrap": "^4.20.0",
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
