@@ -4,6 +4,7 @@
 
 const authEvents = require('./auth/events')
 const authUi = require('./auth/ui')
+const reviewsUi = require('./reviews/ui')
 // const gameEvents = require('./game/events')
 
 // use require without a reference to ensure a file is bundled
@@ -18,5 +19,8 @@ $(() => {
   $('#settings').on('click', authUi.openSettings)
   $('#exit-settings').on('click', authUi.closeSettings)
   $('#change-password').on('submit', authEvents.onChangePassword)
+  $('#reviews').hide()
+  $('#post-review').on('click', reviewsUi.openReviews)
+  $('#close-review').on('click', reviewsUi.closeReviews)
   // $('#new-post').on('click', gameEvents.onNewGame)
 })
