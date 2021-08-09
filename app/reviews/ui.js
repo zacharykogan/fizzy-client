@@ -34,10 +34,10 @@ const showAllSuccess = function (payload) {
     const review = payload.reviews[i]
 
     const colElement = $('<div class="col-4"></div>')
-    const cardElement = $('<div class="card"></div');
-    const cardBody = $('<div class="card-body"></div');
+    const cardElement = $('<div class="card"></div')
+    const cardBody = $('<div class="card-body"></div')
     const cardTitle = $('<h5 class="card-title"></h5>').html(review.name)
-    const cardText = $('<p class="card-text"></p>').html(review.review)
+    const cardText = $('<p class="card-text"></p>').html(review.review + '<br/>Rating: ' + review.rating + '/5')
     cardBody.append(cardTitle)
     cardBody.append(cardText)
     cardElement.append(cardBody)
