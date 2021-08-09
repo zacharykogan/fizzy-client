@@ -1,12 +1,11 @@
 'use strict'
 
 const getFormfields = require('./../../lib/get-form-fields')
-// const store = require('../store')
+const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 
 const onPostReview = function (event) {
-  console.log('I AM HERE')
   event.preventDefault()
   const form = event.target
   const data = getFormfields(form)
@@ -15,8 +14,18 @@ const onPostReview = function (event) {
     .catch(new Error())
 }
 
+const allReviews = function (event) {
+  console.log('this button works')
+  event.preventDefault()
+  const data = store.user.data
+  api.getAllReviews(data)
+    .then(ui.showAllSuccess)
+    .catch(new Error())
+}
+
 module.exports = {
-  onPostReview
+  onPostReview,
+  allReviews
 }
 
 
