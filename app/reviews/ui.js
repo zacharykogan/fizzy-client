@@ -12,9 +12,14 @@ const closeReviews = function () {
   $('#settings').show()
   $('#sign-out').show()
   $('#post-review').show()
+  $('#message').text('')
 }
 
+const postReview = function () {
+  closeReviews()
+}
 module.exports = {
   openReviews,
-  closeReviews
+  closeReviews,
+  postReview
 }
