@@ -24,5 +24,4 @@ $(() => {
   $('#post-review').on('click', reviewsUi.openReviews)
   $('#close-review').on('click', reviewsUi.closeReviews)
   $('#reviewform').on('submit', reviewsEvents.onPostReview)
-  // $('#new-post').on('click', gameEvents.onNewGame)
 })

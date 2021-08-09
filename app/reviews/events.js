@@ -18,3 +18,15 @@ const onPostReview = function (event) {
 module.exports = {
   onPostReview
 }
+
+
+// //
+//  Mon Aug 09 2021 10:56:19 GMT-0400 (Eastern Daylight Time)
+// POST /reviews
+// body {"name":{"name":"beer"},"type":"it was great","review":{"review":"ahdfhasoidhferb"},"rating":{"rating":"1"}}
+
+// POST /reviews
+// body {"review":{"name":"Joe's Apple Cider Vinegar Seltzer","type":"Seltzer","review":"Delicious! The best drink ever.","rating":5}}
+
+// POST /reviews
+// body {"name":"BEER 1","type":"Beer","review":"irhga;oihg","rating":"5"}
