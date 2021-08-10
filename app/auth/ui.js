@@ -30,6 +30,8 @@ const signOutSuccess = (data) => {
   $('#signed_in_user').show()
   $('div.returning_user').show()
   $('#signed_in_user').hide()
+  $('#showallreviews').hide()
+  $('#showmyreviews').hide()
 }
 
 const openSettings = function () {
@@ -39,6 +41,9 @@ const openSettings = function () {
   $('#settings').hide()
   $('#sign-out').hide()
   $('#showallreveiws').hide()
+  $('#allReviews').html('')
+  $('#showallreviews').hide()
+  $('#showmyreviews').hide()
 }
 const closeSettings = function () {
   $('#message').text(' ')

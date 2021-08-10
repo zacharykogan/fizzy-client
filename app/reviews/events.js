@@ -14,25 +14,33 @@ const onPostReview = function (event) {
     .catch(new Error())
 }
 
+const onEditReview = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormfields(form)
+  // api.editReview(data)
+  //   .then(ui.postReviewSuccess)
+  //   .catch(new Error())
+}
+
 const allReviews = function (event) {
   console.log('this button works')
   event.preventDefault()
-  const data = store.user.data
-  api
-    .getAllReviews(data)
+  api.getAllReviews()
     .then(function (payload) {
-      ui.showAllSuccess(payload.reviews, false)
+      store.reviews = payload.reviews
+      ui.showAllSuccess(false)
     })
-    .catch(new Error());
+    .catch(new Error())
 }
 
 const myReviews = function (event) {
   console.log('My Reviews Button')
   event.preventDefault()
-  const data = store.user.data
-  api.getMyReviews(data)
+  api.getMyReviews()
     .then(function (payload) {
-      ui.showAllSuccess(payload.reviews, true)
+      store.reviews = payload.reviews
+      ui.showAllSuccess(true)
     })
     .catch(new Error())
 }

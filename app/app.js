@@ -25,4 +25,5 @@ $(() => {
   $('#reviewform').on('submit', reviewsEvents.onPostReview)
   $('#showallreviews').on('click', reviewsEvents.allReviews)
   $('#showmyreviews').on('click', reviewsEvents.myReviews)
+  $('#editreviews').hide()
 })
