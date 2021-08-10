@@ -30,11 +30,14 @@ const closeReviews = function () {
 
 const postReviewSuccess = function () {
   closeReviews()
+  $('#reviews').reset()
+  $('#reviewform').reset()
   $('#message').text('Thank you for submitting your review!')
 }
 
 const editReviewSuccess = function () {
   closeReviews()
+  $('#editreviewform').reset()
   $('#message').text('Review has been updated!')
 }
 
