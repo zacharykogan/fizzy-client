@@ -25,13 +25,12 @@ const postReviewSuccess = function () {
   $('#message').text('Thank your for submitting your review!')
 }
 
-const showAllSuccess = function (payload) {
-  console.log(payload)
-
+const showAllSuccess = function (reviews, showButtons) {
+  $('#allReviews').html('')
   let currentRow = $('<div class="row"></div>')
   let i = 0
-  for (i = 0; i < payload.reviews.length; i++) {
-    const review = payload.reviews[i]
+  for (i = 0; i < reviews.length; i++) {
+    const review = reviews[i]
 
     const colElement = $('<div class="col-4"></div>')
     const cardElement = $('<div class="card"></div')
@@ -49,7 +48,6 @@ const showAllSuccess = function (payload) {
       currentRow = $('<div class="row"></div>')
     }
   }
-
   if (i % 3 !== 0) {
     $('#allReviews').append(currentRow)
   }

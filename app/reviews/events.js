@@ -18,16 +18,30 @@ const allReviews = function (event) {
   console.log('this button works')
   event.preventDefault()
   const data = store.user.data
-  api.getAllReviews(data)
-    .then(ui.showAllSuccess)
+  api
+    .getAllReviews(data)
+    .then(function (payload) {
+      ui.showAllSuccess(payload.reviews, false)
+    })
+    .catch(new Error());
+}
+
+const myReviews = function (event) {
+  console.log('My Reviews Button')
+  event.preventDefault()
+  const data = store.user.data
+  api.getMyReviews(data)
+    .then(function (payload) {
+      ui.showAllSuccess(payload.reviews, true)
+    })
     .catch(new Error())
 }
 
 module.exports = {
   onPostReview,
-  allReviews
+  allReviews,
+  myReviews
 }
-
 
 // //
 //  Mon Aug 09 2021 10:56:19 GMT-0400 (Eastern Daylight Time)
