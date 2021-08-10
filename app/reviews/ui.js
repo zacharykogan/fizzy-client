@@ -19,21 +19,26 @@ const openReviews = function () {
 
 const closeReviews = function () {
   $('#reviews').hide()
-  $("#editreviews").hide()
+  $('#editreviews').hide()
   $('#settings').show()
   $('#sign-out').show()
   $('#post-review').show()
   $('#showallreviews').show()
+  $('#showmyreviews').show()
   $('#message').text('')
 }
 
 const postReviewSuccess = function () {
+  $('#reviewname').val('')
+  $('#reviewbody').val('')
+  $('#reviewrating').val('')
   closeReviews()
-  $('#message').text('Thank your for submitting your review!')
+  $('#message').text('Thank you for submitting your review!')
 }
 
 const editReviewSuccess = function () {
   closeReviews()
+  $('#editreviewform').reset()
   $('#message').text('Review has been updated!')
 }
 
@@ -60,10 +65,12 @@ const onEditReview = function (event) {
   const review = store.reviews[findReviewIndex(reviewId)]
   console.log(review)
   $('#editreviews').show()
+  $('#message').text('Please edit your review.')
   $('#settings').hide()
   $('#post-review').hide()
   $('#sign-out').hide()
   $('#close-review').show()
+  $('#showmyreviews').hide()
   $('#showallreviews').hide()
   $('#editreviewform').find('input[name="review[name]"]').val(review.name)
   $('#editreviewform').find('input[name="review[review]"]').val(review.review)
@@ -88,8 +95,10 @@ const showAllSuccess = function (showButtons) {
     cardBody.append(cardTitle)
     cardBody.append(cardText)
     if (showButtons) {
-      const deleteButton = $('<button type="button" class="btn btn-outline-danger">Delete</button>').data('id', review._id).on('click', onDeleteReview)
-      const editButton = $('<button type="button" class="btn btn-outline-primary">Edit</button>').data('id', review._id).on('click', onEditReview)
+      const deleteButton = $('<button id="deleteButton" type="button" class="btn btn-outline-danger" >Delete</button>').data('id', review._id).on('click', onDeleteReview)
+      const editButton = $('<button id="editButton" type="button" class="btn btn-outline-primary">Edit</button>')
+        .data('id', review._id)
+        .on('click', onEditReview)
       cardBody.append(deleteButton)
       cardBody.append(editButton)
     }
@@ -102,7 +111,7 @@ const showAllSuccess = function (showButtons) {
       currentRow = $('<div class="row"></div>')
     }
   }
-  if (i % 3 !== 0) {
+  if (i % 1 !== 0) {
     $('#allReviews').append(currentRow)
   }
 }

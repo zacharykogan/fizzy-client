@@ -18,6 +18,11 @@ h1 {
   min-width: 620px;
   max-height: 10%;
 }
+
+h5 {
+  color:  #ce83e3;
+  font-family: Goldman;
+}
 input{
   width: 25%;
   padding: 12px 20px;
@@ -64,6 +69,17 @@ button {
   min-width: 620px;
 }
 
+#deleteButton{
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: Goldman;
+  min-width: 200px;
+}
+
+#editButton{
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: Goldman;
+  min-width: 200px;
+}
 .container {
   height: 75vh;
   cursor: crosshair;
@@ -79,24 +95,7 @@ button {
   background-size: cover;
 }
 
-.box {
-  color: rgb(236, 44, 208);
-  border-bottom: 2px solid rgba(106,173,181,255);
-  border-right: 2px solid rgba(106,173,181,255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100% / 3);
-  text-shadow: 2px 2px rgba(0 , 0, 0, .25);
-  font-size: 15vh;
-  user-select: none;
-  &:nth-child(3n) {
-    border-right: 0;
+.card {
+ background-image: url('https://media.istockphoto.com/vectors/fizzing-air-bubbles-on-white-background-underwater-oxygen-texture-of-vector-id921224980?k=6&m=921224980&s=612x612&w=0&h=G8GgE_Ha0LdK4lVzQZUVvIWCKzB6_R6dzBV_AiUCDsw=')
+
   }
-  &:nth-last-child(-1n + 3) {
-    border-bottom: 0;
-  }
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}

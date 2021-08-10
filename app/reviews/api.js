@@ -5,7 +5,6 @@ const store = require('../store')
 const ui = require('./ui')
 
 const postReview = function (data) {
-  ui.postReviewSuccess()
   return $.ajax({
     url: config.apiUrl + '/reviews',
     method: 'POST',
