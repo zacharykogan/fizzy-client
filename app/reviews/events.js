@@ -14,20 +14,43 @@ const onPostReview = function (event) {
     .catch(new Error())
 }
 
+const onEditReview = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormfields(form)
+  api.editReview(data, $(form).data('id'))
+    .then(ui.editReviewSuccess)
+    .catch(new Error())
+}
+
 const allReviews = function (event) {
   console.log('this button works')
   event.preventDefault()
-  const data = store.user.data
-  api.getAllReviews(data)
-    .then(ui.showAllSuccess)
+  api.getAllReviews()
+    .then(function (payload) {
+      store.reviews = payload.reviews
+      ui.showAllSuccess(false)
+    })
+    .catch(new Error())
+}
+
+const myReviews = function (event) {
+  console.log('My Reviews Button')
+  event.preventDefault()
+  api.getMyReviews()
+    .then(function (payload) {
+      store.reviews = payload.reviews
+      ui.showAllSuccess(true)
+    })
     .catch(new Error())
 }
 
 module.exports = {
   onPostReview,
-  allReviews
+  allReviews,
+  myReviews,
+  onEditReview
 }
-
 
 // //
 //  Mon Aug 09 2021 10:56:19 GMT-0400 (Eastern Daylight Time)

@@ -14,15 +14,42 @@ const postReview = function (data) {
   })
 }
 
-const getAllReviews = function (data) {
+const getAllReviews = function () {
+  return $.ajax({
+    url: config.apiUrl + '/reviews/all',
+    method: 'GET',
+    headers: { Authorization: 'Bearer ' + store.user.token }
+  })
+}
+
+const getMyReviews = function () {
   return $.ajax({
     url: config.apiUrl + '/reviews',
     method: 'GET',
+    headers: { Authorization: 'Bearer ' + store.user.token }
+  })
+}
+
+const deleteReview = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews/' + id,
+    method: 'DELETE',
+    headers: { Authorization: 'Bearer ' + store.user.token }
+  })
+}
+
+const editReview = function (data, id) {
+  return $.ajax({
+    url: config.apiUrl + '/reviews/' + id,
+    method: 'PATCH',
     headers: { Authorization: 'Bearer ' + store.user.token },
     data: data
   })
 }
 module.exports = {
   postReview,
-  getAllReviews
+  getAllReviews,
+  getMyReviews,
+  deleteReview,
+  editReview
 }
