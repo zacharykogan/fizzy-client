@@ -19,6 +19,7 @@ const openReviews = function () {
 
 const closeReviews = function () {
   $('#reviews').hide()
+  $("#editreviews").hide()
   $('#settings').show()
   $('#sign-out').show()
   $('#post-review').show()
@@ -29,6 +30,11 @@ const closeReviews = function () {
 const postReviewSuccess = function () {
   closeReviews()
   $('#message').text('Thank your for submitting your review!')
+}
+
+const editReviewSuccess = function () {
+  closeReviews()
+  $('#message').text('Review has been updated!')
 }
 
 const findReviewIndex = function (reviewId) {
@@ -52,23 +58,17 @@ const onDeleteReview = function (event) {
 const onEditReview = function (event) {
   const reviewId = $(event.target).data('id')
   const review = store.reviews[findReviewIndex(reviewId)]
+  console.log(review)
   $('#editreviews').show()
   $('#settings').hide()
   $('#post-review').hide()
   $('#sign-out').hide()
   $('#close-review').show()
   $('#showallreviews').hide()
-  $('#message').text('Update Your Review')
-  $('#allReviews').html('')
-  $('#showallreviews').hide()
-  $('#showmyreviews').hide()
   $('#editreviewform').find('input[name="review[name]"]').val(review.name)
   $('#editreviewform').find('input[name="review[review]"]').val(review.review)
   $('#editreviewform').find('input[name="review[rating]"]').val(review.rating)
-  $('#editreviewform').on('submit', reviewsEvents.onPostReview)
-  openReviews()
-  // const data = store.user.data
-  // api.editReview(data)
+  $('#editreviewform').data('id', reviewId)
 }
 
 const showAllSuccess = function (showButtons) {
@@ -111,5 +111,6 @@ module.exports = {
   openReviews,
   closeReviews,
   postReviewSuccess,
+  editReviewSuccess,
   showAllSuccess
 }

@@ -18,9 +18,9 @@ const onEditReview = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormfields(form)
-  // api.editReview(data)
-  //   .then(ui.postReviewSuccess)
-  //   .catch(new Error())
+  api.editReview(data, $(form).data('id'))
+    .then(ui.editReviewSuccess)
+    .catch(new Error())
 }
 
 const allReviews = function (event) {
@@ -48,7 +48,8 @@ const myReviews = function (event) {
 module.exports = {
   onPostReview,
   allReviews,
-  myReviews
+  myReviews,
+  onEditReview
 }
 
 // //
