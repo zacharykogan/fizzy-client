@@ -1,13 +1,11 @@
 'use strict'
 
 const signUpSuccess = function (data) {
-  $('form').trigger('reset')
   $('div.new_user').hide()
   $('#message').text('Thank you for signing up for FIZZY!')
 }
 const signUpFailure = function (data) {
   $('#message').text('Oops! Something went wrong. Please, try again.')
-  $('form').trigger('reset')
 }
 
 const signInSuccess = function (data) {
@@ -15,13 +13,11 @@ const signInSuccess = function (data) {
   $('div.new_user').hide()
   $('div.returning_user').hide()
   $('#signed_in_user').show()
-  $('form').trigger('reset')
   $('div.settings').hide()
 }
 
 const signInFailure = function (data) {
   $('#message').text('Oops! Something went wrong. Please, try again.')
-  $('form').trigger('reset')
 }
 
 const signOutSuccess = (data) => {
