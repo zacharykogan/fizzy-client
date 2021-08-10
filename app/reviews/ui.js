@@ -84,6 +84,9 @@ const onEditReview = function (event) {
 
 const showAllSuccess = function (showButtons) {
   $('#allReviews').html('')
+  if (store.reviews.length === 0) {
+    $('#message').text('You have not submitted any reviews yet!')
+  }
 
   let currentRow = $('<div class="row"></div>')
   let i = 0
