@@ -18,8 +18,13 @@ const onEditReview = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormfields(form)
+  const reviewId = $(event.target).data('id')
   api.editReview(data, $(form).data('id'))
-    .then(ui.editReviewSuccess)
+    .then(function () {
+      console.log(data)
+      const reviewIndex = ui.findReviewIndex(reviewId)
+      ui.editReviewSuccess(reviewIndex, data.review.name, data.review.review, data.review.rating)
+    })
     .catch(new Error())
 }
 

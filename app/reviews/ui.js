@@ -34,13 +34,17 @@ const postReviewSuccess = function () {
   $('#reviewrating').val('')
   closeReviews()
   $('#message').text('Thank you for submitting your review!')
+    .then$('#showmyreviews').click()
 }
 
-const editReviewSuccess = function () {
+const editReviewSuccess = function (reviewIndex, name, review, rating) {
+  store.reviews[reviewIndex].name = name
+  store.reviews[reviewIndex].review = review
+  store.reviews[reviewIndex].rating = rating
   closeReviews()
-  $('#editreviewform').reset()
-  $('#message').text('Review has been updated!')
-}
+  showAllSuccess(true)
+  $("#message").text("Review has been updated!")
+};
 
 const findReviewIndex = function (reviewId) {
   for (let i = 0; i < store.reviews.length; i++) {
@@ -121,5 +125,6 @@ module.exports = {
   closeReviews,
   postReviewSuccess,
   editReviewSuccess,
-  showAllSuccess
+  showAllSuccess,
+  findReviewIndex
 }
