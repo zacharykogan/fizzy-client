@@ -43,8 +43,8 @@ const editReviewSuccess = function (reviewIndex, name, review, rating) {
   store.reviews[reviewIndex].rating = rating
   closeReviews()
   showAllSuccess(true)
-  $("#message").text("Review has been updated!")
-};
+  $('#message').text('Review has been updated!')
+}
 
 const findReviewIndex = function (reviewId) {
   for (let i = 0; i < store.reviews.length; i++) {
@@ -84,22 +84,37 @@ const onEditReview = function (event) {
 
 const showAllSuccess = function (showButtons) {
   $('#allReviews').html('')
+  if (store.reviews.length === 0) {
+    $('#message').text('You have not submitted any reviews yet!')
+    return
+  }
 
-  let currentRow = $('<div class="row"></div>')
-  let i = 0
-  for (i = 0; i < store.reviews.length; i++) {
+  const rowsElements = []
+  let currentRowIndex = -1
+  for (let i = 0; i < store.reviews.length; i++) {
+    // Every 3 columns - create a new row
+    if (i % 3 === 0) {
+      rowsElements.push($('<div class="row"></div>'))
+      currentRowIndex++
+    }
+
     const review = store.reviews[i]
 
     const colElement = $('<div class="col-4"></div>')
     const cardElement = $('<div class="card"></div>')
     const cardBody = $('<div class="card-body"></div')
     const cardTitle = $('<h5 class="card-title"></h5>').html(review.name)
-    const cardText = $('<p class="card-text"></p>').html(review.review + '<br/>Rating: ' + review.rating + '/5')
+    const cardText = $('<p class="card-text"></p>').html(
+      review.review + '<br/>Rating: ' + review.rating + '/5'
+    )
 
     cardBody.append(cardTitle)
     cardBody.append(cardText)
+
     if (showButtons) {
-      const deleteButton = $('<button id="deleteButton" type="button" class="btn btn-outline-danger" >Delete</button>').data('id', review._id).on('click', onDeleteReview)
+      const deleteButton = $('<button id="deleteButton" type="button" class="btn btn-outline-danger" >Delete</button>')
+        .data('id', review._id)
+        .on('click', onDeleteReview)
       const editButton = $('<button id="editButton" type="button" class="btn btn-outline-primary">Edit</button>')
         .data('id', review._id)
         .on('click', onEditReview)
@@ -109,15 +124,11 @@ const showAllSuccess = function (showButtons) {
 
     cardElement.append(cardBody)
     colElement.append(cardElement)
-    currentRow.append(colElement)
-    if ((i + 1) % 3 === 0) {
-      $('#allReviews').append(currentRow)
-      currentRow = $('<div class="row"></div>')
-    }
+
+    rowsElements[currentRowIndex].append(colElement)
   }
-  if (i % 1 !== 0) {
-    $('#allReviews').append(currentRow)
-  }
+
+  rowsElements.forEach((rowElement) => $('#allReviews').append(rowElement))
 }
 
 module.exports = {
