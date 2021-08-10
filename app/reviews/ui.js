@@ -29,9 +29,10 @@ const closeReviews = function () {
 }
 
 const postReviewSuccess = function () {
+  $('#reviewname').val('')
+  $('#reviewbody').val('')
+  $('#reviewrating').val('')
   closeReviews()
-  $('#reviews').reset()
-  $('#reviewform').reset()
   $('#message').text('Thank you for submitting your review!')
 }
 

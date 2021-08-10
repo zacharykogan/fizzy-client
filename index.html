@@ -85,12 +85,12 @@
      <div id="reviews" class="form-group">
       <form id="reviewform">
         <label> WHAT WAS THE NAME OF THE BEVERAGE?</label>
-        <input name="review[name]" type="text" class="form-control">
+        <input id="reviewname" name="review[name]" type="text" class="form-control">
         <label>SAY A FEW WORDS ABOUT IT</label>
-        <input name="review[review]" type="text" class="form-control" rows="3">
+        <input id="reviewbody" name="review[review]" type="text" class="form-control" rows="3">
         <label>RATE 0-5</label>
         <br>
-        <input name="review[rating]" type="number" min="0" max="5">
+        <input id="reviewrating" name="review[rating]" type="number" min="0" max="5">
         <br>
         <button type="submit"> Post Review </button>
       </form>
