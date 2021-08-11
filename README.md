@@ -1,130 +1,62 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+FIZZY
 
-# browser-template
+https://zacharykogan.github.io/fizzy-client/
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+Welcome to FIZZY, an app for for seltzer, sparkling water, carbonated beverages and lovers of all things FIZZY!
 
-## Installation
+With the ever growing number of amazing drinks available at stores, bars and restaurants, FIZZY allows you to rate, recommend and learn from other drinkers about what you should drink next.
 
-1. [Download](../../archive/main.zip) this template.
-    - **Do Not Fork And Clone**
-    - Click the "Clone or Download" button and select "Download Zip".
-1. Move to the `sei/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-main.zip`.
-1. Rename the template directory from `browser-template-main` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `fizzy` with the name of
-    your project.
-    - You can search for all instances of text in Atom by pressing
-    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled **"…or push an existing
-   repository from the command line."** Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
-   > **Note:** This last step will rename your default branch to **main**. This branch name will be used when deploying.
+To use FIZZY you will need to sign up and sign in.
 
-## Structure
+In the app you will see an All Reviews button. This will show you all of the reviews on FIZZY from around the world.
 
-### App
+Create a review of your latest fizzy drink by clicking Review a Drink.
 
-Developers should store JavaScript files in [`app`](app).
-The "manifest" or entry-point is
-[`app/app.js`](app/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+Enter then name of the drink, a few words about it and rate it 1-5.
 
-### Config
+Once you submit your rating the whole FIZZY community will be able to see it.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`app/config.js`](app/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+Clicking on MY REVIEWS will show you the reviews you have submitted.
 
-### Styles
+You can edit or delete your reviews. 
 
-Developers should store styles in [`app/styles`](app/styles) and load them
-from [`app/styles/index.scss`](app/styles/index.scss). Bootstrap version 3 is
-included in this template.
+Click SETTINGS to enter the settings menu where you can change your password.
 
-### Forms and Using `getFormFields`
-
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
-
-### Deployment
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Adding Images
-
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
-
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
-
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
-
-## Adding Fonts
-
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
-
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
-
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
-
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
-
-## Tasks
-
-Developers should run these often!
-
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-- `grunt deploy`: builds and deploys main branch
+SIGN OUT when you're done and go have another fizzy drink!
 
 
-## Additional Resources
 
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
+--------------------------------------------------------------------
 
-## [License](LICENSE)
 
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+
+
+USER STORY:
+
+
+
+User Stories
+
+MVP:
+
+As a new user, I want to SIGN UP to create a NEW ACCOUNT with EMAIL and PASSWORD
+As a returning user, I want to be able to SIGN IN to access my ACCOUNT.
+As a logged in user I want to make posts with REVIEWS of seltzers.
+As a logged in user I want to see all of my previous posts.
+As a logged in user I want to be able to EDIT and DELETE my posts.
+As a logged in user I want to be able to change my password.
+As a logged in user I want to be able to sing out.
+
+STRETCH:
+
+As a logged in user I want to see all of the reviews of all users.
+I want to upload images.
+AS a logged in user I want to add my rating to existing seltzers.
+As a user I want to connect with my friends on Instagram, FB, Twitter.
+As a user I want my review to post to my social.
+As a user I want to see my friends reviews.
+
+--------------------------------------------------------------
+WIRE FRAME
+
+![wireframe](https://media.git.generalassemb.ly/user/37208/files/4d5e6780-f5cf-11eb-8f66-b389646a17b3)
