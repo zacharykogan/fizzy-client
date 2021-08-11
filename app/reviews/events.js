@@ -21,7 +21,6 @@ const onEditReview = function (event) {
   const reviewId = $(event.target).data('id')
   api.editReview(data, $(form).data('id'))
     .then(function () {
-      console.log(data)
       const reviewIndex = ui.findReviewIndex(reviewId)
       ui.editReviewSuccess(reviewIndex, data.review.name, data.review.review, data.review.rating)
     })
@@ -29,7 +28,6 @@ const onEditReview = function (event) {
 }
 
 const allReviews = function (event) {
-  console.log('this button works')
   event.preventDefault()
   api.getAllReviews()
     .then(function (payload) {
@@ -40,7 +38,6 @@ const allReviews = function (event) {
 }
 
 const myReviews = function (event) {
-  console.log('My Reviews Button')
   event.preventDefault()
   api.getMyReviews()
     .then(function (payload) {
