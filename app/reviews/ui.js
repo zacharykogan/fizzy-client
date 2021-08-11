@@ -67,7 +67,6 @@ const onDeleteReview = function (event) {
 const onEditReview = function (event) {
   const reviewId = $(event.target).data('id')
   const review = store.reviews[findReviewIndex(reviewId)]
-  console.log(review)
   $('#editreviews').show()
   $('#message').text('Please edit your review.')
   $('#settings').hide()
