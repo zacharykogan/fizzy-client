@@ -33,7 +33,7 @@ const postReviewSuccess = function () {
   $('#reviewbody').val('')
   $('#reviewrating').val('')
   closeReviews()
-  $('#message').text('Thank you for submitting your review!')
+  $('#message').text('Review Submitted')
     .then$('#showmyreviews').click()
 }
 
@@ -43,7 +43,7 @@ const editReviewSuccess = function (reviewIndex, name, review, rating) {
   store.reviews[reviewIndex].rating = rating
   closeReviews()
   showAllSuccess(true)
-  $('#message').text('Review has been updated!')
+  $('#message').text('')
 }
 
 const findReviewIndex = function (reviewId) {

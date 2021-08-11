@@ -9,7 +9,7 @@ const signUpFailure = function (data) {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('Welcome to FIZZY! ')
+  $('#message').text('')
   $('div.new_user').hide()
   $('div.returning_user').hide()
   $('#signed_in_user').show()
@@ -21,7 +21,7 @@ const signInFailure = function (data) {
 }
 
 const signOutSuccess = (data) => {
-  $('#message').text('Goodbye!')
+  $('#message').text('')
   $('div.new_user').show()
   $('#signed_in_user').show()
   $('div.returning_user').show()
