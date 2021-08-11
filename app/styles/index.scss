@@ -20,7 +20,7 @@ h1 {
 }
 
 h5 {
-  color:  #ce83e3;
+  color:  #0e93ec;
   font-family: Goldman;
 }
 input{
@@ -73,29 +73,25 @@ button {
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
   font-family: Goldman;
   min-width: 200px;
+  color: #52335a;
 }
 
 #editButton{
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
   font-family: Goldman;
   min-width: 200px;
+  max-width: 30%;
 }
 .container {
   height: 75vh;
-  cursor: crosshair;
-  color: rgb(236, 44, 208);
+  color: rgb(160, 107, 152);
   max-height: 50%;
-}
-
-.board {
-  margin: auto;
-  max-height: calc(75vh - 75px);
-  max-width: calc(75vh - 75px);
-  background: url('https://static.vecteezy.com/system/resources/thumbnails/000/245/981/small_2x/mountain-sunset-landscape-first-person-view-vector.jpg') no-repeat center center;
-  background-size: cover;
+  max-width: 900px;
 }
 
 .card {
- background-image: url('https://media.istockphoto.com/vectors/fizzing-air-bubbles-on-white-background-underwater-oxygen-texture-of-vector-id921224980?k=6&m=921224980&s=612x612&w=0&h=G8GgE_Ha0LdK4lVzQZUVvIWCKzB6_R6dzBV_AiUCDsw=')
-
+ background-image: url('https://media.istockphoto.com/vectors/fizzing-air-bubbles-on-white-background-underwater-oxygen-texture-of-vector-id921224980?k=6&m=921224980&s=612x612&w=0&h=G8GgE_Ha0LdK4lVzQZUVvIWCKzB6_R6dzBV_AiUCDsw=');
+  border: 2px solid #rgb(236, 44, 208);
+  padding: 15px 32px;
+  min-width: 50px
   }
