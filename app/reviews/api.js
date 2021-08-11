@@ -2,7 +2,7 @@
 
 const config = require('../config')
 const store = require('../store')
-const ui = require('./ui')
+// const ui = require('./ui')
 
 const postReview = function (data) {
   return $.ajax({

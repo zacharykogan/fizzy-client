@@ -112,10 +112,10 @@ const showAllSuccess = function (showButtons) {
     cardBody.append(cardText)
 
     if (showButtons) {
-      const deleteButton = $('<button id="deleteButton" type="button" class="btn btn-outline-danger" >Delete</button>')
+      const deleteButton = $('<button id="deleteButton" type="button" class="btn btn-danger" >Delete</button>')
         .data('id', review._id)
         .on('click', onDeleteReview)
-      const editButton = $('<button id="editButton" type="button" class="btn btn-outline-primary">Edit</button>')
+      const editButton = $('<button id="editButton" type="button" class="btn btn-secondary">Edit</button>')
         .data('id', review._id)
         .on('click', onEditReview)
       cardBody.append(deleteButton)

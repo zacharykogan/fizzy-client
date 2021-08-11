@@ -26,6 +26,7 @@ const signOutSuccess = (data) => {
   $('#signed_in_user').show()
   $('div.returning_user').show()
   $('#signed_in_user').hide()
+  $('#allReviews').html('')
 }
 
 const openSettings = function () {
