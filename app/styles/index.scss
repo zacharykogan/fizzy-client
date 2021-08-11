@@ -1,26 +1,45 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
 
 body {
-  background-color: rgb(209, 238, 236);
+  background-color: rgb(205, 205, 205);
+  background-image: url('https://w0.peakpx.com/wallpaper/990/564/HD-wallpaper-carbonated-colors-beer-blue-bubbles-fizz-fizzy-pink-rainbow-water-yellow.jpg');
+  background-size: 100% 100%;
   text-align: center;
   width: 90%;
   max-height: 50% vh;
 }
 h1 {
-  color: rgb(204, 47, 228);
+  color: rgb(164, 255, 84);
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: black;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   cursor:  default;
-  font-family: Goldman;
+  font-family: 'Goldman';
+  font-size: x-large;
   width: 100%;
   text-align: center;
-  font-size: 100px;
+  font-size: 150px;
   min-width: 620px;
   max-height: 10%;
 }
 
+#message {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  font-family: Goldman;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  border: 2px solid #rgb(236, 44, 208);
+  padding: 15px 32px;
+}
 h5 {
-  color:  #0e93ec;
+  color: black;
   font-family: Goldman;
 }
 input{
@@ -34,15 +53,18 @@ input{
 //   cursor:  default;
 // }
 form{
-  color: rgb(233, 200, 228);
-  background-blend-mode: darken;
-  align: center;
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+  text-align: center;
   font-family: Goldman;
+  font-style: bold;
   min-width: 620px;
+  max-width: 50%;
+  display: inline-block;
 }
 
 .submit {
-  background-color: rgb(158, 231, 235);
+  background-color: rgb(164, 255, 84);
   border: 2px solid #rgb(236, 44, 208);
   padding: 15px 32px;
   text-align: center;
@@ -56,7 +78,7 @@ form{
 }
 
 button {
-  background-color: rgb(148, 182, 180);
+  background-color: rgb(164, 255, 84);
   border: 2px solid #rgb(236, 44, 208);
   padding: 15px 32px;
   text-align: center;
@@ -84,14 +106,17 @@ button {
 }
 .container {
   height: 75vh;
-  color: rgb(160, 107, 152);
+  color: rgb(160, 156, 107);
   max-height: 50%;
   max-width: 900px;
 }
 
 .card {
- background-image: url('https://media.istockphoto.com/vectors/fizzing-air-bubbles-on-white-background-underwater-oxygen-texture-of-vector-id921224980?k=6&m=921224980&s=612x612&w=0&h=G8GgE_Ha0LdK4lVzQZUVvIWCKzB6_R6dzBV_AiUCDsw=');
+//  background-image: url('https://media.istockphoto.com/vectors/fizzing-air-bubbles-on-white-background-underwater-oxygen-texture-of-vector-id921224980?k=6&m=921224980&s=612x612&w=0&h=G8GgE_Ha0LdK4lVzQZUVvIWCKzB6_R6dzBV_AiUCDsw=');
   border: 2px solid #rgb(236, 44, 208);
   padding: 15px 32px;
-  min-width: 50px
+  min-width: 50px;
+  background-color: rgb(255,255,102);
+  color: rgb(128,128,128);
+  font-family: Goldman
   }
