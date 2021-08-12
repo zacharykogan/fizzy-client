@@ -34,7 +34,6 @@ const postReviewSuccess = function () {
   $('#reviewrating').val('')
   closeReviews()
   $('#message').text('Review Submitted')
-    .then$('#showmyreviews').click()
 }
 
 const editReviewSuccess = function (reviewIndex, name, review, rating) {
