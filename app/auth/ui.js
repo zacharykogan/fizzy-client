@@ -48,15 +48,21 @@ const closeSettings = function () {
   $('#sign-out').show()
   $('#showallreviews').show()
   $('#showmyreviews').show()
+  $('#new-password').val('')
+  $('#old-password').val('')
 }
 
 const changePasswordSuccess = function () {
   closeSettings()
   $('#message').text('Password Updated')
+  $('#new-password').val('')
+  $('#old-password').val('')
 }
 
 const changePasswordFailure = function () {
   $('#message').text('Check your password and try again')
+  $('#new-password').val('')
+  $('#old-password').val('')
 }
 
 module.exports = {
