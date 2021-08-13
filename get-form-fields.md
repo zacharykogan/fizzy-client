@@ -109,7 +109,7 @@ const data = {}
 
 data['book']['title'] = 'A book title our user gave us'
 data['movie']['title'] = 'A movie title our user gave us'
-console.log(data)
+.log(data)
 /*
 {
   movie: { title: 'A movie title our user gave us' },
@@ -118,7 +118,7 @@ console.log(data)
 */
 
 data['book']['author'] = 'A book author we want to be grouped with the book title'
-console.log(data)
+
 /*
 {
   movie: { title: 'A movie title our user gave us' },
