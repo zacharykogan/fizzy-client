@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="app/styles/index.scss">
+  <title>FiZZY</title>
+  <style>
+        </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<body>
+  <h1>FiZZY</h1>
+  <div class="new_user">
+    <form id="sign-up">
+      <label></label>
+      <input name="credentials[email]" type="text" class="form-control" placeholder="email">
+      <input name="credentials[password]" type="password" class="form-control" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="confirm password">
+      <input class="submit" type="submit" value="Sign Up">
+    </form>
+  </div>
+  <div class="returning_user">
+    <form id="sign-in">
+      <label></label>
+      <input name="credentials[email]" type="text" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password"><br>
+      <input class="submit" type="submit" value="Sign In">
+    </form>
+  </div>
+  <p id="message"></p>
+<div id="signedin">
+  <div id="signed_in_user">
+    <button id="showallreviews"> ALL REVIEWS </button>
+    <br>
+    <br>
+      <button id="showmyreviews"> MY REVIEWS </button>
+      <br>
+    <p id="showData"></p>
+    <button id="post-review">REVIEW A DRINK</button>
+     <div id="reviews" class="form-group">
+      <form id="reviewform">
+        <label> WHAT WAS THE NAME OF THE BEVERAGE?</label>
+        <input id="reviewname" name="review[name]" type="text" class="form-control">
+        <label>SAY A FEW WORDS ABOUT IT</label>
+        <input id="reviewbody" name="review[review]" type="text" class="form-control" rows="3">
+        <label>RATE 0-5</label>
+        <br>
+        <input id="reviewrating" name="review[rating]" type="number" min="0" max="5">
+        <br>
+        <button type="submit"> Post Review </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <button id="close-review">CANCEL</button>
+      <div id="myData"></div>
+    </div>
+    <div id="editreviews" class="form-group">
+      <form id="editreviewform">
+        <label> WHAT WAS THE NAME OF THE BEVERAGE?</label>
+        <input name="review[name]" type="text" class="form-control">
+        <label>SAY A FEW WORDS ABOUT IT</label>
+        <input name="review[review]" type="text" class="form-control" rows="3">
+        <label>RATE 0-5</label>
+        <br>
+        <input name="review[rating]" type="number" min="0" max="5">
+        <br>
+        <button type="submit"> Update Review </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <button id="close-editreview">CANCEL</button>
+    </div>
+    <br>
+    <br>
+    <button id="settings">SETTINGS</button>
+    <div class="settings">
+      <form id="change-password">
+        <label></label>
+        <input id="old-password" name="passwords[old]" type="password" placeholder="old password">
+        <input id="new-password" name="passwords[new]" type="password" placeholder="new password">
+        <br>
+        <input class="submit" type="submit" value="CHANGE PASSWORD">
+      </form>
+      <br>
+      <button id="exit-settings">CANCEL</button>
+    </div>
+    <br>
+    <br>
+    <button id="sign-out" type="button"> SIGN OUT </button>
+    <br>
+    <br>
+    <br>
+  </div>
+
+  <div id="allReviews" class="container">
+
+  </div>
+</div>
+</body>
+
+</html>
